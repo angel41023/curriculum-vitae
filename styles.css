@@ -1,0 +1,334 @@
+body{
+  background-color: #222;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+/**CV***/
+.cv-wrapper{
+  width:800px;
+  max-width:100%;
+  margin:15px auto;
+  background-color:white;
+  display:grid;
+  grid-template-columns: 250px 1fr;
+}
+  /***Sidebar CV***/
+  .cv-wrapper__sidebar{
+    box-shadow: 2px 0 15px rgba(0,0,0,0.3);
+    overflow:hidden;
+  }
+    /***Picture***/
+    .cv-wrapper__sidebar__image-container img{
+      width:100%;
+    }
+    /***Content***/
+    .cv-wrapper__sidebar__content-container{
+      background-color: #000;
+      padding:10px 0;
+      font-size:0.7rem;
+      color:#fff;
+      height:100%;
+    }
+      /***Contact***/
+      .cv-wrapper__sidebar__contact-container .subtitle{
+        margin-bottom:5px;
+      }
+      /***Skills***/
+      .cv-wrapper__sidebar__skills-container{
+        padding:40px 20px;
+      }
+        .cv-wrapper__sidebar__skills-container .subtitle{
+          margin-bottom:5px;
+        }
+        .col-skill{
+          width:40%;
+          
+        }
+        .col-skill-bar{
+          width:60%;
+          background-color:#fff;
+          height:10px;
+          position:relative;
+        }
+          .col-skill-bar:after{
+            content: "";
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0.9em solid black;
+            border-left: 0.7em solid transparent;
+            position:absolute;
+            top:0;
+            right:0;
+          }
+          .col-skill-bar .progress{
+            display:block;
+            width:80%;
+            height:100%;
+            position:relative;
+            background-color:rgb(59, 59, 59);
+          }
+          .col-skill-bar .progress:after{
+            content: "";
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0.9em solid white;
+            border-left: 0.7em solid transparent;
+            position:absolute;
+            top:0;
+            right:0;
+          }
+          .col-skill-bar .progress[data-progress="90"]{
+            width:90%;
+          }
+          .col-skill-bar .progress[data-progress="85"]{
+            width:85%;
+          }
+          .col-skill-bar .progress[data-progress="70"]{
+            width:70%;
+          }
+          .col-skill-bar .progress[data-progress="55"]{
+            width:55%;
+          }
+          .col-skill-bar .progress[data-progress="25"]{
+            width:25%;
+         }
+          .col-skill-bar .progress[data-progress="40"]{
+            width:40%;
+          }
+          .col-skill-bar .progress[data-progress="30"]{
+            width:30%;
+          }
+
+  /***Content CV***/
+  .cv-wrapper__content{
+    position:relative;
+    font-size:0.8rem;
+  }
+    .cv-wrapper__content p{
+      color: #666;
+    }
+    /***Introduction***/
+      /***Title***/
+      .cv-wrapper__content__introduction h1{
+        text-transform:uppercase;
+        font-weight:100;
+        font-size:1.8rem;
+        margin-bottom:10px;
+      }
+      .cv-wrapper__content__introduction .role{
+        text-transform:uppercase;
+        font-weight:100;
+        font-size:0.9rem;
+        color: #666;
+      }
+      .cv-wrapper__content__introduction .right-top-badge{
+        position:absolute;
+        width:90%;
+        height:2.1rem;
+        top:10px;
+        right:0;
+        display:grid;
+        grid-template-columns: 50px 50px 1fr;
+        
+      }
+        .right-top-badge .short, .right-top-badge .large{
+          background-color:black;
+          position:relative;
+        }
+        
+        .right-top-badge .short:before{
+          content: "";
+          border-top: 0;
+          border-right:  1.2rem solid transparent;
+          border-bottom: 2.1rem solid white;
+          border-left: 0;
+          position:absolute;
+          top:0;
+          left:0;
+        }
+        .right-top-badge .short:after{
+          content: "";
+          border-top: 2.1rem solid white;
+          border-right: 0;
+          border-bottom: 0;
+          border-left: 1.2rem solid transparent;
+          position:absolute;
+          top:0;
+          right:0;
+        }
+        
+        .right-top-badge .large:before{
+          content: "";
+          border-top: 0;
+          border-right:  1.2rem solid transparent;
+          border-bottom: 2.1rem solid white;
+          border-left: 0;
+          position:absolute;
+          top:0;
+          left:0;
+        }
+
+    /***Personal Information***/
+    .cv-wrapper__content__personal-information{
+
+    }
+      .left-large-badge{
+        position:relative;
+        width:80%;
+        height:2.1rem;
+        display:grid;
+        grid-template-columns: 1fr 50px;
+      }
+      .left-large-badge .large{
+        display: flex;
+        align-items: center;
+        padding-left:30px
+      }
+      .left-large-badge .short, .left-large-badge .large{
+        background-color:black;
+        position:relative;
+      }
+        .left-large-badge .large:before{
+          content: "";
+          border-top: 0;
+          border-right:  0;
+          border-bottom: 2.1rem solid white;
+          border-left: 1.2rem solid transparent;
+          position:absolute;
+          top:0;
+          right:0;
+          
+        }
+        .left-large-badge .short:before{
+          content: "";
+          border-top: 0;
+          border-right:  0;
+          border-bottom: 2.1rem solid white;
+          border-left: 1.2rem solid transparent;
+          position:absolute;
+          top:0;
+          right:0;
+        }
+        .left-large-badge .short:after{
+          content: "";
+          border-top: 2.1rem solid white;
+          border-right: 1.2rem solid transparent;
+          border-bottom: 0;
+          border-left: 0;
+          position:absolute;
+          top:0;
+          left:0;
+        }
+
+/***Helper Classes**/
+.subtitle{
+  font-size:1.2rem;
+  font-weight:100;
+  text-transform:uppercase;
+  color: #fff;
+  margin:0;
+}
+.black-color{
+  color: #000;
+}
+.text-center{
+  text-align:center;
+}
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  padding:5px 0;
+  
+}
+.col-badge{
+  background-color:#fff;
+  padding:10px 0;
+  text-align:center;
+  color: #000;
+  position:relative;
+}
+.col-badge.mini{
+  width:30%;
+}
+.col-badge.large{
+  width:80%;
+  min-height:1.2em;
+}
+  .col-badge:after{
+    content: "";
+    border-top: 2.95em solid white;
+    border-right: 1.5em solid transparent;
+    border-bottom: 0;
+    border-left: 0;
+    position:absolute;
+    top:0;
+    right:-1.5em;
+  }
+.col-content-badge-mini{
+  width:70%;
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+  box-sizing: border-box;
+}
+  
+.content{
+  padding:35px 30px;
+}
+.left-col{
+  padding:8px;
+  width:20%;
+  box-sizing: border-box;
+}
+  .job-icon{
+    display:block;
+    height:100%;
+    background:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    border-radius:5px;
+  }
+.right-col{
+  width:80%;
+  box-sizing: border-box;
+  padding:8px;
+}
+  .right-col span{
+    display:block;
+  }
+  .right-col p{
+    margin:0;
+  }
+
+  /*****Medias*****+*/
+  @media print{
+    body{
+      margin:0;
+      background:white;
+    }
+    .right-top-badge{
+      overflow: hidden;
+    }
+    .right-top-badge .short:before{
+      border-bottom: 2.3rem solid white;
+      top: -2px;
+      left: -1px;
+      
+    }
+    .right-top-badge .short:after{
+      border-bottom: 2.3rem solid white;
+      top: -1px;
+      
+    }
+    .right-top-badge .large:before{
+      border-bottom: 2.3rem solid white;
+      top: -2px;
+      left: -1px;
+    }
+  }
