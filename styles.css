@@ -21,9 +21,14 @@ a{
     overflow:hidden;
   }
     /***Picture***/
-    .cv-wrapper__sidebar__image-container img{
-      width:100%;
+    .cv-wrapper__sidebar__image-container {
+      max-height: 250px;
+      overflow: hidden;
     }
+      .cv-wrapper__sidebar__image-container img{
+        width:100%;
+        margin-top: -40px;
+      }
     /***Content***/
     .cv-wrapper__sidebar__content-container{
       background-color: #000;
@@ -86,15 +91,18 @@ a{
           .col-skill-bar .progress[data-progress="85"]{
             width:85%;
           }
-          .col-skill-bar .progress[data-progress="70"]{
-            width:70%;
+          .col-skill-bar .progress[data-progress="60"]{
+            width:60%;
           }
           .col-skill-bar .progress[data-progress="55"]{
             width:55%;
           }
           .col-skill-bar .progress[data-progress="25"]{
             width:25%;
-         }
+          }
+          .col-skill-bar .progress[data-progress="45"]{
+            width:45%;
+          }
           .col-skill-bar .progress[data-progress="40"]{
             width:40%;
           }
@@ -172,9 +180,7 @@ a{
         }
 
     /***Personal Information***/
-    .cv-wrapper__content__personal-information{
-
-    }
+    .cv-wrapper__content__personal-information{}
       .left-large-badge{
         position:relative;
         width:80%;
